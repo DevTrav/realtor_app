@@ -12,3 +12,9 @@
 2023-08-10 23:19:36.553 CDT [67250] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2023-08-10 23:19:36.555 CDT [67251] LOG:  database system was shut down at 2023-08-10 23:18:19 CDT
 2023-08-10 23:19:36.557 CDT [67250] LOG:  database system is ready to accept connections
+2023-08-11 18:25:45.969 CDT [67250] LOG:  server process (PID 82686) was terminated by signal 9: Killed: 9
+2023-08-11 18:25:45.969 CDT [67250] LOG:  terminating any other active server processes
+2023-08-11 18:25:45.971 CDT [67250] LOG:  all server processes terminated; reinitializing
+2023-08-11 18:25:45.975 CDT [67250] LOG:  startup process (PID 82687) was terminated by signal 9: Killed: 9
+2023-08-11 18:25:45.975 CDT [67250] LOG:  aborting startup due to startup process failure
+2023-08-11 18:25:45.975 CDT [67250] LOG:  database system is shut down
