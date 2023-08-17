@@ -17,6 +17,7 @@ class UserAccountManager(BaseUserManager):
     
     def create_superuser(self, email, name, password):
         user = self.create_user(email, name, password)
+
         user.is_superuser = True
         user.is_staff = True
         user.saved()
@@ -26,12 +27,13 @@ class UserAccountManager(BaseUserManager):
 
 class UserAccount(AbstractBaseUser, PermissionsMixin):
     """Database Model for user accounts"""
+
     email = models.EmailField(max_length=255, unique=True)
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
-    object = UserAccountManager()
+    objects = UserAccountManager()
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['name']
@@ -42,5 +44,5 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     def get_short_name(self):
         return self.name
     
-    def _str_(self):
+    def __str__(self):
         return self.email
